@@ -125,11 +125,11 @@ const Hero = () => {
                             transition={{ delay: 1.5 }}
                             className="pt-8 border-t border-white/5"
                         >
-                            <p className="text-[10px] tracking-widest text-white/50 uppercase mb-3">Trusted By</p>
+                            <p className="text-[10px] tracking-widest text-white/70 uppercase mb-3">Trusted By</p>
                             <div className="flex items-center justify-center lg:justify-start space-x-8">
-                                <div className="text-white/40 text-xs font-light">Fortune 500 Companies</div>
-                                <div className="w-px h-4 bg-white/20"></div>
-                                <div className="text-white/40 text-xs font-light">Global Enterprises</div>
+                                <div className="text-white/70 text-xs font-light">Fortune 500 Companies</div>
+                                <div className="w-px h-4 bg-white/30"></div>
+                                <div className="text-white/70 text-xs font-light">Global Enterprises</div>
                             </div>
                         </motion.div>
                     </div>
@@ -146,7 +146,7 @@ const Hero = () => {
                             <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 rounded-2xl blur-3xl"></div>
 
                             {/* Image Container */}
-                            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                                 <img
                                     src="https://sheikhnabeel.com/wp-content/uploads/2025/05/Untitled-6.png"
                                     alt="Sheikh Nabeel - Strategic Advisor"

@@ -10,8 +10,10 @@
     "preview": "npx vite preview"
   },
   "dependencies": {
+    "cobe": "^0.6.5",
     "framer-motion": "^11.0.0",
     "lucide-react": "^0.300.0",
+    "motion": "^12.23.26",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",

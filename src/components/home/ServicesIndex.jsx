@@ -94,13 +94,6 @@ const ServicesIndex = () => {
                                             alt={service.title}
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
-                                        {/* Gradient Overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-
-                                        {/* Service Number */}
-                                        <div className="absolute top-6 right-6">
-                                            <span className="text-6xl font-light text-white/20">{service.number}</span>
-                                        </div>
                                     </div>
 
                                     {/* Content Section */}
@@ -126,9 +119,6 @@ const ServicesIndex = () => {
                                             </div>
                                         </Link>
                                     </div>
-
-                                    {/* Hover Border Effect */}
-                                    <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/20 rounded-2xl transition-all duration-500 pointer-events-none"></div>
                                 </div>
                             </div>
                         ))}

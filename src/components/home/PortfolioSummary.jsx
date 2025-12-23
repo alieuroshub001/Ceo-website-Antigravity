@@ -48,12 +48,13 @@ const PortfolioSummary = () => {
     ];
 
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+    const leftY = useTransform(scrollYProgress, [0, 1], ["0%", "-25%"]);
 
     return (
         <section ref={targetRef} className="relative h-[300vh] bg-gradient-to-b from-black via-[#0a0a09] to-black">
             <div className="sticky top-0 h-screen overflow-hidden flex flex-col lg:flex-row">
                 {/* Left Side: Fixed Header */}
-                <div className="w-full lg:w-2/5 p-8 lg:p-16 flex flex-col justify-start z-10 bg-gradient-to-br from-black to-[#0a0a09] h-full border-r border-white/5">
+                <motion.div style={{ y: leftY }} className="w-full lg:w-2/5 p-8 lg:p-16 flex flex-col justify-start z-10 bg-gradient-to-br from-black to-[#0a0a09] h-full border-r border-white/5">
                     <div className="max-w-lg">
                         {/* Badge */}
                         <div className="inline-block mb-6">
@@ -88,18 +89,18 @@ const PortfolioSummary = () => {
                         </div>
 
                         {/* Scroll Indicator */}
-                        <div className="mt-auto pt-12 hidden lg:block">
+                        <div className="mt-8 pt-6 hidden lg:block">
                             <div className="flex items-center space-x-4">
                                 <span className="text-[10px] tracking-widest text-white/30 uppercase">Scroll to explore</span>
                                 <div className="flex-1 h-[1px] bg-gradient-to-r from-white/20 to-transparent"></div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right Side: Scrolling List */}
-                <div className="w-full lg:w-3/5 h-full flex items-center relative overflow-hidden">
-                    <motion.div style={{ y }} className="w-full px-6 lg:px-12 xl:px-16 pt-12 lg:pt-20 pb-[10vh]">
+                <div className="w-full lg:w-3/5 h-full flex items-start relative overflow-hidden">
+                    <motion.div style={{ y }} className="w-full px-6 lg:px-12 xl:px-16 pt-8 lg:pt-12 pb-[10vh]">
                         {works.map((work, idx) => (
                             <motion.div
                                 key={idx}
@@ -150,7 +151,7 @@ const PortfolioSummary = () => {
                     </motion.div>
 
                     {/* Gradient Overlays */}
-                    <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/50 to-transparent pointer-events-none z-20"></div>
+                    <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/30 to-transparent pointer-events-none z-20"></div>
                     <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none z-20"></div>
                 </div>
             </div>

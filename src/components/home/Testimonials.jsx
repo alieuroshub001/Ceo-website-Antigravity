@@ -1,11 +1,12 @@
 import { motion, useMotionValue, useAnimationFrame } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useState, useRef } from 'react';
 import { Quote, Star } from 'lucide-react';
 
 const Testimonials = () => {
     const x = useMotionValue(0);
     const [isDragging, setIsDragging] = useState(false);
     const baseVelocity = -1; // Pixels per frame (negative = left movement)
+    const containerRef = useRef(null);
 
     const testimonials = [
         {
@@ -61,6 +62,33 @@ const Testimonials = () => {
 
     // Duplicate testimonials for seamless loop
     const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
+
+    // Handle horizontal scroll/swipe (two-finger swipe on trackpad)
+    const handleWheel = (e) => {
+        // Check if it's a horizontal scroll (deltaX) or if shift is pressed for horizontal scroll
+        const isHorizontalScroll = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+
+        if (isHorizontalScroll) {
+            e.preventDefault();
+            const currentX = x.get();
+            const scrollAmount = e.deltaX * 1.5; // Adjust sensitivity
+
+            // Calculate the width of one set of testimonials
+            const cardWidth = 400 + 24; // card width + gap
+            const setWidth = testimonials.length * cardWidth;
+
+            let newX = currentX - scrollAmount;
+
+            // Handle infinite loop wrapping
+            if (newX <= -setWidth) {
+                newX = newX + setWidth;
+            } else if (newX >= setWidth) {
+                newX = newX - setWidth;
+            }
+
+            x.set(newX);
+        }
+    };
 
     // Infinite scroll animation
     useAnimationFrame((t, delta) => {
@@ -131,7 +159,11 @@ const Testimonials = () => {
                     <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
 
                     {/* Marquee Container */}
-                    <div className="overflow-hidden group/marquee">
+                    <div
+                        ref={containerRef}
+                        onWheel={handleWheel}
+                        className="overflow-hidden group/marquee"
+                    >
                         <motion.div
                             drag="x"
                             dragConstraints={false}
