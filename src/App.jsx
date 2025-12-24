@@ -9,6 +9,7 @@ import AboutScroll from './pages/AboutScroll';
 import IndependentBoardAdvisory from './pages/IndependentBoardAdvisory';
 import DigitalTransformation from './pages/DigitalTransformation';
 import MeetTheNetwork from './pages/MeetTheNetwork';
+import Blog from './pages/Blog';
 import ScrollToTop from './components/layout/ScrollToTop';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                         <Route path="/independent-board-advisory" element={<IndependentBoardAdvisory />} />
                         <Route path="/digital-business-transform" element={<DigitalTransformation />} />
                         <Route path="/network" element={<MeetTheNetwork />} />
+                        <Route path="/blog" element={<Blog />} />
                     </Routes>
                 </main>
                 <Footer />

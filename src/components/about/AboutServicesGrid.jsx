@@ -37,9 +37,9 @@ const AboutServicesGrid = () => {
     ];
 
     return (
-        <section className="bg-black py-24 border-t border-white/5">
-            <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5">
+        <section className="bg-gradient-to-b from-black via-[#0a0a09] to-black py-12 md:py-24">
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                     {services.map((service, idx) => (
                         <motion.div
                             key={idx}
@@ -47,13 +47,13 @@ const AboutServicesGrid = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.05 }}
-                            className="group bg-black p-10 hover:bg-white/[0.02] transition-colors relative"
+                            className="group bg-black/50 border border-white/5 rounded-2xl md:rounded-3xl p-6 md:p-8 hover:bg-black/70 transition-colors relative"
                         >
-                            <div className="mb-6 w-8 h-[1px] bg-accent/50 group-hover:w-12 transition-all duration-300"></div>
-                            <h3 className="text-lg font-light text-white uppercase mb-4 leading-snug group-hover:text-accent transition-colors">
+                            <div className="mb-6 w-8 h-[1px] bg-white/50 group-hover:w-12 transition-all duration-300"></div>
+                            <h3 className="text-base md:text-lg font-light text-white mb-4 leading-snug group-hover:text-white/90 transition-colors">
                                 {service.title}
                             </h3>
-                            <p className="text-sm text-white/40 leading-relaxed font-light">
+                            <p className="text-xs md:text-sm text-white/60 leading-relaxed font-light">
                                 {service.desc}
                             </p>
                         </motion.div>

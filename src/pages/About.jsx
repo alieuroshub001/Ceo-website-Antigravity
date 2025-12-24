@@ -3,19 +3,17 @@ import AboutServicesGrid from '../components/about/AboutServicesGrid';
 import AboutBentoBio from '../components/about/AboutBentoBio';
 import AboutExpertiseList from '../components/about/AboutExpertiseList';
 import AboutMarquee from '../components/about/AboutMarquee';
-import AboutTestimonials from '../components/about/AboutTestimonials';
-import AboutPricing from '../components/about/AboutPricing';
+import Testimonials from '../components/home/Testimonials';
 
 const About = () => {
     return (
         <div className="pt-0"> {/* Removed pt to let Hero handle it */}
             <AboutHero />
+            <AboutMarquee />
             <AboutBentoBio />
             <AboutServicesGrid />
             <AboutExpertiseList />
-            <AboutMarquee />
-            <AboutTestimonials />
-            <AboutPricing />
+            <Testimonials />
         </div>
     );
 };
