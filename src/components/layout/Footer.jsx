@@ -7,10 +7,10 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     const socialLinks = [
-        { icon: FaLinkedinIn, href: '#', label: 'LinkedIn', color: 'hover:text-accent' },
-        { icon: FaTwitter, href: '#', label: 'Twitter', color: 'hover:text-accent' },
-        { icon: FaInstagram, href: '#', label: 'Instagram', color: 'hover:text-accent' },
-        { icon: FaFacebookF, href: '#', label: 'Facebook', color: 'hover:text-accent' }
+        { icon: FaLinkedinIn, href: '#', label: 'LinkedIn', color: 'hover:text-white' },
+        { icon: FaTwitter, href: '#', label: 'Twitter', color: 'hover:text-white' },
+        { icon: FaInstagram, href: '#', label: 'Instagram', color: 'hover:text-white' },
+        { icon: FaFacebookF, href: '#', label: 'Facebook', color: 'hover:text-white' }
     ];
 
     const services = [
@@ -44,17 +44,17 @@ const Footer = () => {
                         transition={{ duration: 1 }}
                         className="text-center mb-24 lg:mb-32"
                     >
-                        <h2 className="text-4xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 tracking-tight">
-                            Ready to <span className="text-accent">Transform</span> Your Business?
+                        <h2 className="text-4xl lg:text-6xl xl:text-7xl font-light text-white mb-8 tracking-tight">
+                            Ready to <span className="bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Transform</span> Your Business?
                         </h2>
-                        <p className="text-base lg:text-lg text-white/50 mb-12 max-w-2xl mx-auto tracking-wide">
+                        <p className="text-base lg:text-lg text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed">
                             Let's collaborate to unlock unprecedented growth and innovation for your organization
                         </p>
                         <motion.a
                             href="#contact"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="inline-flex items-center gap-4 bg-accent text-black px-12 py-5 rounded-full font-bold tracking-wider uppercase text-sm shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all duration-300"
+                            className="inline-flex items-center gap-4 bg-white text-black px-12 py-5 rounded-lg font-semibold tracking-wide text-sm shadow-lg hover:shadow-white/20 transition-all duration-300"
                         >
                             Let's Talk
                             <BsArrowUpRight className="text-lg" />
@@ -72,27 +72,27 @@ const Footer = () => {
                         {/* Left Column - Contact Info */}
                         <div className="space-y-12">
                             <div>
-                                <p className="text-[10px] tracking-[0.5em] text-accent/60 mb-12 uppercase font-bold flex items-center gap-3">
-                                    <span className="w-12 h-[1px] bg-accent/60"></span>
+                                <p className="text-[10px] tracking-[0.3em] text-white/40 mb-12 uppercase font-medium flex items-center gap-3">
+                                    <span className="w-12 h-[1px] bg-gradient-to-r from-white/50 to-transparent"></span>
                                     EXCEED YOUR POTENTIAL
                                 </p>
                                 <div className="space-y-8">
                                     <a
                                         href="tel:+923000369622"
-                                        className="group flex items-center gap-4 text-2xl lg:text-3xl font-light text-white hover:text-accent transition-all duration-300 tracking-wide"
+                                        className="group flex items-center gap-4 text-2xl lg:text-3xl font-light text-white hover:text-white/80 transition-all duration-300 tracking-wide"
                                     >
-                                        <HiOutlinePhone className="text-accent group-hover:rotate-12 transition-transform" />
+                                        <HiOutlinePhone className="text-white/60 group-hover:rotate-12 transition-transform" />
                                         +92 300 0369622
                                     </a>
                                     <a
                                         href="mailto:hello@sheikhnabeel.com"
-                                        className="group flex items-center gap-4 text-xl lg:text-2xl font-light text-white hover:text-accent transition-all duration-300 uppercase tracking-wide"
+                                        className="group flex items-center gap-4 text-xl lg:text-2xl font-light text-white hover:text-white/80 transition-all duration-300 uppercase tracking-wide"
                                     >
-                                        <HiOutlineMail className="text-accent group-hover:scale-110 transition-transform" />
+                                        <HiOutlineMail className="text-white/60 group-hover:scale-110 transition-transform" />
                                         hello@sheikhnabeel.com
                                     </a>
                                     <div className="group flex items-start gap-4 text-base text-white/60 mt-8">
-                                        <HiOutlineLocationMarker className="text-accent mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                                        <HiOutlineLocationMarker className="text-white/60 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
                                         <span className="tracking-wide leading-relaxed">
                                             Office 509, 5th Floor, Kohistan Tower<br />
                                             Saddar, Rawalpindi, 46000, Pakistan
@@ -103,14 +103,14 @@ const Footer = () => {
 
                             {/* Social Media Links */}
                             <div className="pt-8 border-t border-white/5">
-                                <p className="text-[10px] tracking-[0.4em] text-white/40 mb-6 uppercase font-bold">Connect With Us</p>
+                                <p className="text-[10px] tracking-widest text-white/30 mb-6 uppercase">Connect With Us</p>
                                 <div className="flex gap-4">
                                     {socialLinks.map((social, index) => (
                                         <motion.a
                                             key={index}
                                             href={social.href}
                                             whileHover={{ y: -4 }}
-                                            className={`w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 ${social.color} transition-all duration-300 backdrop-blur-sm hover:bg-white/10 hover:border-white/20`}
+                                            className={`w-12 h-12 rounded-lg bg-white/[0.02] border border-white/5 flex items-center justify-center text-white/40 ${social.color} transition-all duration-300 hover:bg-white/10 hover:border-white/20`}
                                             aria-label={social.label}
                                         >
                                             <social.icon className="text-lg" />
@@ -134,14 +134,14 @@ const Footer = () => {
                                         <input
                                             type="text"
                                             placeholder="FULL NAME"
-                                            className="w-full bg-white/5 border border-white/10 px-6 py-4 text-sm text-white placeholder:text-white/30 focus:border-accent focus:bg-white/10 outline-none tracking-wider uppercase transition-all duration-300 rounded-xl"
+                                            className="w-full bg-white/5 border border-white/10 px-6 py-4 text-sm text-white placeholder:text-white/30 focus:border-white/20 focus:bg-white/10 outline-none tracking-wider uppercase transition-all duration-300 rounded-xl"
                                         />
                                     </div>
                                     <div className="relative">
                                         <input
                                             type="email"
                                             placeholder="EMAIL ADDRESS"
-                                            className="w-full bg-white/5 border border-white/10 px-6 py-4 text-sm text-white placeholder:text-white/30 focus:border-accent focus:bg-white/10 outline-none tracking-wider uppercase transition-all duration-300 rounded-xl"
+                                            className="w-full bg-white/5 border border-white/10 px-6 py-4 text-sm text-white placeholder:text-white/30 focus:border-white/20 focus:bg-white/10 outline-none tracking-wider uppercase transition-all duration-300 rounded-xl"
                                         />
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@ const Footer = () => {
                                             <input
                                                 type="checkbox"
                                                 id="csuite"
-                                                className="w-5 h-5 accent-accent cursor-pointer transition-transform group-hover:scale-110"
+                                                className="w-5 h-5 accent-white cursor-pointer transition-transform group-hover:scale-110"
                                             />
                                             <label
                                                 htmlFor="csuite"
@@ -166,7 +166,7 @@ const Footer = () => {
                                             <input
                                                 type="checkbox"
                                                 id="ned"
-                                                className="w-5 h-5 accent-accent cursor-pointer transition-transform group-hover:scale-110"
+                                                className="w-5 h-5 accent-white cursor-pointer transition-transform group-hover:scale-110"
                                             />
                                             <label
                                                 htmlFor="ned"
@@ -182,7 +182,7 @@ const Footer = () => {
                                     <textarea
                                         placeholder="TELL US ABOUT YOUR PROJECT"
                                         rows="5"
-                                        className="w-full bg-white/5 border border-white/10 p-6 text-sm text-white placeholder:text-white/30 focus:border-accent focus:bg-white/10 outline-none tracking-wider uppercase transition-all duration-300 resize-none rounded-xl"
+                                        className="w-full bg-white/5 border border-white/10 p-6 text-sm text-white placeholder:text-white/30 focus:border-white/20 focus:bg-white/10 outline-none tracking-wider uppercase transition-all duration-300 resize-none rounded-xl"
                                     ></textarea>
                                 </div>
 
@@ -190,7 +190,7 @@ const Footer = () => {
                                     type="submit"
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
-                                    className="w-full flex items-center justify-center gap-4 bg-accent text-black px-8 py-5 font-bold tracking-[0.3em] uppercase text-xs rounded-xl shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all duration-300"
+                                    className="w-full flex items-center justify-center gap-4 bg-white text-black px-8 py-5 font-semibold tracking-wide text-sm rounded-xl shadow-lg hover:shadow-white/20 hover:bg-white/90 transition-all duration-300"
                                 >
                                     Send Message
                                     <BsArrowRight className="text-lg" />
@@ -216,7 +216,7 @@ const Footer = () => {
                                 <img
                                     src="https://sheikhnabeel.com/wp-content/uploads/2025/04/1-1-1536x1536.png"
                                     alt="Sheikh Nabeel"
-                                    className="w-14 h-14 rounded-full object-cover border-2 border-accent/30 shadow-xl shadow-accent/10"
+                                    className="w-14 h-14 rounded-full object-cover border-2 border-white/10 shadow-xl"
                                 />
                                 <span className="text-xl font-bold tracking-[0.2em] text-white">
                                     SHEIKH<br />NABEEL
@@ -229,8 +229,8 @@ const Footer = () => {
 
                         {/* Quick Links */}
                         <div className="space-y-6">
-                            <h4 className="text-[10px] tracking-[0.5em] font-bold text-white/60 uppercase flex items-center gap-3">
-                                <span className="w-8 h-[1px] bg-accent/60"></span>
+                            <h4 className="text-[10px] tracking-[0.3em] font-medium text-white/40 uppercase flex items-center gap-3">
+                                <span className="w-8 h-[1px] bg-gradient-to-r from-white/50 to-transparent"></span>
                                 Quick Links
                             </h4>
                             <ul className="space-y-3">
@@ -240,7 +240,7 @@ const Footer = () => {
                                             href={link.href}
                                             className="group flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-300 tracking-wide"
                                         >
-                                            <BsArrowRight className="text-accent group-hover:translate-x-1 transition-transform text-xs" />
+                                            <BsArrowRight className="text-white/60 group-hover:translate-x-1 transition-transform text-xs" />
                                             {link.label}
                                         </a>
                                     </li>
@@ -250,8 +250,8 @@ const Footer = () => {
 
                         {/* Services */}
                         <div className="space-y-6">
-                            <h4 className="text-[10px] tracking-[0.5em] font-bold text-white/60 uppercase flex items-center gap-3">
-                                <span className="w-8 h-[1px] bg-accent/60"></span>
+                            <h4 className="text-[10px] tracking-[0.3em] font-medium text-white/40 uppercase flex items-center gap-3">
+                                <span className="w-8 h-[1px] bg-gradient-to-r from-white/50 to-transparent"></span>
                                 Services
                             </h4>
                             <ul className="space-y-3">
@@ -261,7 +261,7 @@ const Footer = () => {
                                             href="#services"
                                             className="group flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors duration-300 tracking-wide"
                                         >
-                                            <BsArrowRight className="text-accent group-hover:translate-x-1 transition-transform text-xs" />
+                                            <BsArrowRight className="text-white/60 group-hover:translate-x-1 transition-transform text-xs" />
                                             {service}
                                         </a>
                                     </li>
@@ -271,8 +271,8 @@ const Footer = () => {
 
                         {/* Newsletter */}
                         <div className="space-y-6">
-                            <h4 className="text-[10px] tracking-[0.5em] font-bold text-white/60 uppercase flex items-center gap-3">
-                                <span className="w-8 h-[1px] bg-accent/60"></span>
+                            <h4 className="text-[10px] tracking-[0.3em] font-medium text-white/40 uppercase flex items-center gap-3">
+                                <span className="w-8 h-[1px] bg-gradient-to-r from-white/50 to-transparent"></span>
                                 Newsletter
                             </h4>
                             <p className="text-xs text-white/40 leading-relaxed tracking-wide">
@@ -282,14 +282,14 @@ const Footer = () => {
                                 <input
                                     type="email"
                                     placeholder="YOUR EMAIL"
-                                    className="w-full bg-white/5 border border-white/10 px-6 py-4 pr-12 text-xs text-white placeholder:text-white/30 focus:border-accent outline-none transition-colors duration-300 rounded-xl tracking-wider"
+                                    className="w-full bg-white/5 border border-white/10 px-6 py-4 pr-12 text-xs text-white placeholder:text-white/30 focus:border-white/20 outline-none transition-colors duration-300 rounded-xl tracking-wider"
                                 />
-                                <button className="absolute right-3 top-1/2 -translate-y-1/2 text-white/60 hover:text-accent transition-colors duration-300 group">
+                                <button className="absolute right-3 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors duration-300 group">
                                     <BsArrowRight className="text-lg group-hover:translate-x-1 transition-transform" />
                                 </button>
                             </div>
                             <div className="flex items-center gap-2 text-[9px] text-white/30 tracking-wide">
-                                <input type="checkbox" className="w-3 h-3 accent-accent" id="privacy" />
+                                <input type="checkbox" className="w-3 h-3 accent-white" id="privacy" />
                                 <label htmlFor="privacy">I agree to the privacy policy</label>
                             </div>
                         </div>
@@ -308,7 +308,7 @@ const Footer = () => {
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className="w-14 h-14 rounded-full bg-accent text-black flex items-center justify-center shadow-2xl shadow-accent/30 hover:shadow-accent/50 transition-all duration-300"
+                        className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center shadow-2xl hover:shadow-white/20 hover:bg-white/90 transition-all duration-300"
                         aria-label="Scroll to top"
                     >
                         <BsArrowUpRight className="text-2xl rotate-[-45deg]" />
