@@ -102,7 +102,7 @@ const ServicesStory = () => {
                             >
                                 <span className="w-16 h-[1px] bg-white group-hover:w-24 transition-all duration-500"></span>
                                 <span className="text-[11px] font-semibold tracking-[0.3em] uppercase flex items-center gap-3">
-                                    Learn More About Us
+                                    Learn More About Me
                                     <BsArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
                                 </span>
                             </Link>

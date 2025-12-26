@@ -12,7 +12,7 @@ const BookingForm = () => {
                         <div>
                             <h3 className="text-3xl text-white font-light mb-4 leading-tight">Transformation <br />Begins Here.</h3>
                             <p className="text-white/60 leading-relaxed text-sm">
-                                We don't just "chat." We diagnose, deconstruct, and rebuild. In this session, we cut through the noise to identify the single most leveragable action you can take immediately.
+                                I don't just "chat." I diagnose, deconstruct, and rebuild. In this session, we cut through the noise to identify the single most leveragable action you can take immediately.
                             </p>
                         </div>
 

@@ -11,10 +11,10 @@ const Services = () => {
         <div className="pt-0">
             <ServicesHero />
             <ServicesIntro />
+            <ServicesExpertise />
             <ServicesList />
             <ServicesStats />
             <ServicesStory />
-            <ServicesExpertise />
             <ServicesOffer />
         </div>
     );

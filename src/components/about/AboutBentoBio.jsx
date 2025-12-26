@@ -1,8 +1,14 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
+import SocialModal from '../shared/SocialModal';
 
 const AboutBentoBio = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <section className="bg-gradient-to-b from-black via-[#0a0a09] to-black py-12 md:py-24">
+            <SocialModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 h-auto md:h-[600px]">
 
@@ -80,15 +86,22 @@ const AboutBentoBio = () => {
                                 <span className="text-xs text-white/50 font-medium">100+ Happy Clients</span>
                             </div>
 
-                            <a href="#" className="w-full py-2.5 md:py-3 bg-white text-black text-[10px] md:text-xs font-bold uppercase tracking-widest text-center rounded-full hover:bg-white/90 transition-colors">
+                            <button
+                                onClick={() => setIsModalOpen(true)}
+                                className="w-full py-2.5 md:py-3 bg-white text-black text-[10px] md:text-xs font-bold uppercase tracking-widest text-center rounded-full hover:bg-white/90 transition-colors"
+                            >
                                 Follow Me
-                            </a>
+                            </button>
                             <div className="flex justify-center space-x-3 md:space-x-4 mt-4 md:mt-6">
-                                {['ln', 'ig', 'tw'].map(s => (
-                                    <span key={s} className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/10 flex items-center justify-center text-[10px] md:text-xs text-white/40 uppercase hover:border-white hover:text-white transition-all cursor-pointer">
-                                        {s}
-                                    </span>
-                                ))}
+                                <a href="https://www.linkedin.com/in/sheikhnabeelofficial/?originalSubdomain=pk" className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/10 flex items-center justify-center text-[10px] md:text-sm text-white/40 uppercase hover:border-white hover:text-white transition-all cursor-pointer">
+                                    <FaLinkedinIn />
+                                </a>
+                                <a href="https://www.instagram.com/sheikhnabeel.official/?hl=en" className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/10 flex items-center justify-center text-[10px] md:text-sm text-white/40 uppercase hover:border-white hover:text-white transition-all cursor-pointer">
+                                    <FaInstagram />
+                                </a>
+                                <a href="https://twitter.com/Euroshub" className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/10 flex items-center justify-center text-[10px] md:text-sm text-white/40 uppercase hover:border-white hover:text-white transition-all cursor-pointer">
+                                    <FaTwitter />
+                                </a>
                             </div>
                         </div>
 

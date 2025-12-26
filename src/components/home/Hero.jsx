@@ -63,7 +63,7 @@ const Hero = () => {
                             {/* Main Heading */}
                             <div className="space-y-4">
                                 <h2 className="text-sm text-white/50 font-light tracking-wide">
-                                    We Help You
+                                    I Help You
                                 </h2>
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight min-h-[8rem] flex flex-col justify-center">
                                     <span className="flex items-center justify-center lg:justify-start">

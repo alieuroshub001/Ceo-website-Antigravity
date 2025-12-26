@@ -42,7 +42,7 @@ const ServicesOffer = () => {
                                 Start Your Project
                             </a>
                             <a href="/portfolio" className="px-10 py-5 bg-white/5 text-white text-sm font-medium tracking-wide rounded-lg border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm text-center">
-                                View Our Work
+                                View My Work
                             </a>
                         </div>
                     </div>

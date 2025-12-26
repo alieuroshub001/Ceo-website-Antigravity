@@ -12,7 +12,7 @@ const ContactForm = ({ inquiryType, selectedSlot }) => {
                 <p className="text-white/50">
                     {selectedSlot
                         ? `Scheduling for ${selectedSlot.date.toLocaleDateString()} at ${selectedSlot.time}`
-                        : "Fill out the form below and we'll get back to you within 24 hours."}
+                        : "Fill out the form below and I'll get back to you within 24 hours."}
                 </p>
             </div>
 

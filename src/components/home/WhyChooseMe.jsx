@@ -88,7 +88,7 @@ const WhyChooseMe = () => {
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
                                 The Best Service for<br />
                                 <span className="bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
-                                    Our Customers
+                                    My Clients
                                 </span>
                             </h2>
 

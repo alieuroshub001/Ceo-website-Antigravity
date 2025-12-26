@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { FaLinkedinIn, FaTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { FaLinkedinIn, FaYoutube, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi';
 import { BsArrowUpRight, BsArrowRight } from 'react-icons/bs';
 import { useLocation, Link } from 'react-router-dom';
@@ -10,10 +10,10 @@ const Footer = () => {
     const location = useLocation();
 
     const socialLinks = [
-        { icon: FaLinkedinIn, href: '#', label: 'LinkedIn', color: 'hover:text-white' },
-        { icon: FaTwitter, href: '#', label: 'Twitter', color: 'hover:text-white' },
-        { icon: FaInstagram, href: '#', label: 'Instagram', color: 'hover:text-white' },
-        { icon: FaFacebookF, href: '#', label: 'Facebook', color: 'hover:text-white' }
+        { icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/sheikhnabeelofficial/?originalSubdomain=pk', label: 'LinkedIn', color: 'hover:text-blue-500' },
+        { icon: FaYoutube, href: 'https://www.youtube.com/@Euroshub', label: 'YouTube', color: 'hover:text-red-500' },
+        { icon: FaInstagram, href: 'https://www.instagram.com/sheikhnabeel.official/?hl=en', label: 'Instagram', color: 'hover:text-pink-500' },
+        { icon: FaFacebookF, href: 'https://www.facebook.com/Euroshub.meta', label: 'Facebook', color: 'hover:text-blue-600' }
     ];
 
     const services = [
@@ -107,7 +107,7 @@ const Footer = () => {
 
                                 {/* Social Media Links */}
                                 <div className="pt-8 border-t border-white/5">
-                                    <p className="text-[10px] tracking-widest text-white/30 mb-6 uppercase">Connect With Us</p>
+                                    <p className="text-[10px] tracking-widest text-white/30 mb-6 uppercase">Connect With Me</p>
                                     <div className="flex gap-4">
                                         {socialLinks.map((social, index) => (
                                             <motion.a

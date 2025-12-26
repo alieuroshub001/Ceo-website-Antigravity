@@ -15,14 +15,14 @@ const AboutHero = () => {
                             className="space-y-6"
                         >
                             <p className="text-xs md:text-sm font-light tracking-[0.5em] text-white/50 uppercase">
-                                Executive Portfolio
+                                Strategic Advisor
                             </p>
                             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white tracking-tight leading-tight">
                                 Sheikh <span className="text-white">Nabeel</span>
                             </h1>
                             <div className="max-w-xl mx-auto lg:mx-0">
                                 <p className="text-white/60 font-light text-sm md:text-base leading-relaxed">
-                                    Navigate the complexities of the digital age with a partner who understands the intersection of strategy, technology, and leadership.
+                                    Empowering businesses to scale through innovation, strategy, and executive leadership.
                                 </p>
                             </div>
                         </motion.div>

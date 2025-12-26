@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar'; // Force HMR update
 import Footer from './components/layout/Footer';
 const Home = lazy(() => import('./pages/Home'));
 const Services = lazy(() => import('./pages/Services'));
+const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
 const CSuiteAdvisory = lazy(() => import('./pages/CSuiteAdvisory'));
 const About = lazy(() => import('./pages/About'));
 const AboutScroll = lazy(() => import('./pages/AboutScroll'));
@@ -26,6 +27,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/services" element={<Services />} />
+                            <Route path="/services/:slug" element={<ServiceDetail />} />
                             <Route path="/c-suite" element={<CSuiteAdvisory />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/about-interactive" element={<AboutScroll />} />

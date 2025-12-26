@@ -23,7 +23,7 @@ const ServicesIntro = () => {
             </div>
 
             <div className="container mx-auto px-6 lg:px-12 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
                     {/* Left Column - Content */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -116,8 +116,8 @@ const ServicesIntro = () => {
                                     className="w-full h-auto object-contain mask-image-gradient"
                                     alt="Sheikh Nabeel - Executive Leadership"
                                     style={{
-                                        maskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)',
-                                        WebkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)'
+                                        maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+                                        WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
                                     }}
                                 />
 
