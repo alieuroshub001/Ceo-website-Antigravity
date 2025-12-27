@@ -99,6 +99,7 @@ const ServiceCard = ({ service }) => (
             <Link
                 to={service.link}
                 className="group/link inline-flex items-center space-x-3 text-white self-start mt-4 lg:mt-6"
+                aria-label={`Learn more about ${service.title}`}
             >
                 <span className="text-xs font-medium tracking-wide">Learn More</span>
                 <div className="flex items-center space-x-2">

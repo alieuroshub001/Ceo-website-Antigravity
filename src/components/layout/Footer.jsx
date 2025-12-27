@@ -261,7 +261,10 @@ const Footer = () => {
                                 placeholder="YOUR EMAIL"
                                 className="w-full bg-white/5 border border-white/10 px-6 py-4 pr-12 text-xs text-white placeholder:text-white/30 focus:border-white/20 outline-none transition-colors duration-300 rounded-xl tracking-wider"
                             />
-                            <button className="absolute right-3 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors duration-300 group">
+                            <button
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors duration-300 group"
+                                aria-label="Subscribe to newsletter"
+                            >
                                 <BsArrowRight className="text-lg group-hover:translate-x-1 transition-transform" />
                             </button>
                         </div>
