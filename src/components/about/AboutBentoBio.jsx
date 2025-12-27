@@ -58,10 +58,11 @@ const AboutBentoBio = () => {
                         <img
                             src={snImage}
                             alt="Sheikh Nabeel"
-                            className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
+                            className="w-full h-full object-contain object-center transition-transform duration-1000 group-hover:scale-105"
                         />
-                        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 text-center">
+                        {/* Bottom Fade Gradient */}
+                        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 text-center z-20">
                             <h2 className="text-2xl md:text-3xl lg:text-5xl font-light text-white mb-2">Sheikh Nabeel</h2>
                             <p className="text-white/70 uppercase tracking-[0.2em] md:tracking-[0.3em] text-[10px] md:text-xs font-medium bg-black/50 inline-block px-3 md:px-4 py-1.5 md:py-2 rounded-full backdrop-blur-md">
                                 Your Strategic Business Partner
