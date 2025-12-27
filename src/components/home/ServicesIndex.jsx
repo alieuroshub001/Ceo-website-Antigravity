@@ -3,10 +3,7 @@ import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-import serviceStrategy from '../../assets/service-strategy.png';
-import serviceOperations from '../../assets/service-operations.png';
-import serviceCrm from '../../assets/service-crm.png';
-import serviceGrowth from '../../assets/service-growth.png';
+import { services as servicesData } from '../../data/services';
 
 const ServicesIndex = () => {
     const targetRef = useRef(null);
@@ -35,42 +32,13 @@ const ServicesIndex = () => {
 
     const x = useTransform(scrollYProgress, [0, 1], xRange);
 
-    const services = [
-        {
-            title: "Business Strategy & Brand Consulting",
-            description: "Build a clear roadmap with actionable insights to scale your business, attract investors, and strengthen your market presence.",
-            image: serviceStrategy,
-            link: "/c-suite",
-            number: "01"
-        },
-        {
-            title: "Digital Operations & Project Management",
-            description: "Streamline backend systems, automate workflows, and manage cross-functional teams with tools like ClickUp, Airtable, and Notion.",
-            image: serviceOperations,
-            link: "/digital-business-transform",
-            number: "02"
-        },
-        {
-            title: "CRM Implementation & Account Management",
-            description: "Optimize the entire client lifecycle using HubSpot, Salesforce, and Zoho to enhance retention and drive revenue.",
-            image: serviceCrm,
-            link: "/services",
-            number: "03"
-        },
-        {
-            title: "Growth Marketing & Funnel Strategy",
-            description: "Design and execute data-driven growth strategies focused on lead generation and brand visibility.",
-            image: serviceGrowth,
-            link: "/services",
-            number: "04"
-        }
-    ];
+    const services = servicesData.filter(s => s.isHighlight);
 
     return (
-        <section ref={targetRef} className="relative h-[300vh] bg-black">
-            <div className="sticky top-0 flex flex-col h-screen overflow-hidden">
+        <section className="bg-black py-20 lg:h-[300vh] lg:py-0 relative">
+            <div className="lg:sticky lg:top-0 flex flex-col lg:h-screen overflow-hidden">
                 {/* Header Section */}
-                <div className="pt-16 pb-8 px-8 lg:px-16">
+                <div className="pt-8 pb-8 px-6 lg:pt-16 lg:px-16">
                     <div className="inline-block mb-4">
                         <span className="text-[10px] tracking-[0.3em] text-white/40 uppercase font-medium">What I Do</span>
                         <div className="w-12 h-[1px] bg-gradient-to-r from-white/50 to-transparent mt-2"></div>
@@ -81,50 +49,21 @@ const ServicesIndex = () => {
                     </h2>
                 </div>
 
-                {/* Carousel Container */}
-                <div className="flex-1 flex items-center overflow-hidden relative">
-                    {/* Horizontal Scrolling Cards */}
-                    <motion.div ref={contentRef} style={{ x }} className="flex gap-8 pl-8 pr-8 lg:gap-12 lg:pl-16 lg:pr-16">
+                {/* Content Container */}
+                <div className="lg:flex-1 lg:flex lg:items-center relative">
+                    {/* Mobile: Horizontal Scroll Snap | Desktop: Scroll Animation */}
+                    <div className="lg:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory px-6 pb-8 scrollbar-hide">
                         {services.map((service, idx) => (
-                            <div
-                                key={idx}
-                                className="relative h-[65vh] w-[75vw] md:w-[55vw] lg:w-[38vw] flex-shrink-0 group"
-                            >
-                                {/* Card Container */}
-                                <div className="relative h-full bg-gradient-to-br from-white/[0.03] to-white/[0.01] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
-                                    {/* Image Section */}
-                                    <div className="relative h-1/2 overflow-hidden">
-                                        <img
-                                            src={service.image}
-                                            alt={service.title}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                        />
-                                    </div>
+                            <div key={idx} className="snap-center shrink-0 w-[85vw]">
+                                <ServiceCard service={service} />
+                            </div>
+                        ))}
+                    </div>
 
-                                    {/* Content Section */}
-                                    <div className="h-1/2 p-8 lg:p-10 flex flex-col justify-between">
-                                        <div>
-                                            <h3 className="text-2xl lg:text-3xl font-light text-white mb-4 leading-tight">
-                                                {service.title}
-                                            </h3>
-                                            <p className="text-sm text-white/60 leading-relaxed">
-                                                {service.description}
-                                            </p>
-                                        </div>
-
-                                        {/* CTA Link */}
-                                        <Link
-                                            to={service.link}
-                                            className="group/link inline-flex items-center space-x-3 text-white self-start mt-6"
-                                        >
-                                            <span className="text-xs font-medium tracking-wide">Learn More</span>
-                                            <div className="flex items-center space-x-2">
-                                                <div className="w-8 h-[1px] bg-white/40 group-hover/link:w-12 group-hover/link:bg-white transition-all duration-300"></div>
-                                                <ArrowRight className="w-4 h-4 text-white/40 group-hover/link:text-white group-hover/link:translate-x-1 transition-all duration-300" />
-                                            </div>
-                                        </Link>
-                                    </div>
-                                </div>
+                    <motion.div ref={contentRef} style={{ x }} className="hidden lg:flex gap-12 pl-16 pr-16">
+                        {services.map((service, idx) => (
+                            <div key={idx} className="w-[38vw] shrink-0">
+                                <ServiceCard service={service} />
                             </div>
                         ))}
                     </motion.div>
@@ -133,5 +72,42 @@ const ServicesIndex = () => {
         </section>
     );
 };
+
+const ServiceCard = ({ service }) => (
+    <div className="relative aspect-[3/4] lg:aspect-auto lg:h-[65vh] bg-gradient-to-br from-white/[0.03] to-white/[0.01] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden group">
+        {/* Image Section */}
+        <div className="relative h-1/2 overflow-hidden">
+            <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+        </div>
+
+        {/* Content Section */}
+        <div className="h-1/2 p-6 lg:p-10 flex flex-col justify-between">
+            <div>
+                <h3 className="text-xl lg:text-3xl font-light text-white mb-3 lg:mb-4 leading-tight">
+                    {service.title}
+                </h3>
+                <p className="text-sm text-white/60 leading-relaxed line-clamp-3 lg:line-clamp-none">
+                    {service.description}
+                </p>
+            </div>
+
+            {/* CTA Link */}
+            <Link
+                to={service.link}
+                className="group/link inline-flex items-center space-x-3 text-white self-start mt-4 lg:mt-6"
+            >
+                <span className="text-xs font-medium tracking-wide">Learn More</span>
+                <div className="flex items-center space-x-2">
+                    <div className="w-8 h-[1px] bg-white/40 group-hover/link:w-12 group-hover/link:bg-white transition-all duration-300"></div>
+                    <ArrowRight className="w-4 h-4 text-white/40 group-hover/link:text-white group-hover/link:translate-x-1 transition-all duration-300" />
+                </div>
+            </Link>
+        </div>
+    </div>
+);
 
 export default ServicesIndex;

@@ -57,7 +57,7 @@ const BlogHero = ({ onSearch }) => {
                 <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <pattern id="blog-grid-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
-                            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" strokeWidth="0.5"/>
+                            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" strokeWidth="0.5" />
                         </pattern>
                     </defs>
                     <rect width="100%" height="100%" fill="url(#blog-grid-pattern)" />
@@ -124,69 +124,9 @@ const BlogHero = ({ onSearch }) => {
                             expert analysis, industry trends, and actionable insights for modern leaders.
                         </motion.p>
 
-                        {/* Search Bar */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.6 }}
-                            className="max-w-2xl mx-auto pt-8"
-                        >
-                            <form onSubmit={handleSearch} className="relative">
-                                <input
-                                    type="text"
-                                    placeholder="Search articles, topics, insights..."
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full px-6 py-5 pl-14 bg-white/5 text-white text-sm font-light tracking-wide rounded-lg border border-white/10 focus:bg-white/10 focus:border-white/20 transition-all duration-300 backdrop-blur-sm placeholder:text-white/40 outline-none"
-                                />
-                                <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
-                                <button
-                                    type="submit"
-                                    className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-3 bg-white text-black text-xs font-semibold tracking-wide rounded-md hover:bg-white/90 transition-all duration-300"
-                                >
-                                    Search
-                                </button>
-                            </form>
-                        </motion.div>
 
-                        {/* Categories */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.8 }}
-                            className="flex flex-wrap items-center justify-center gap-3 pt-8"
-                        >
-                            <span className="text-[10px] tracking-[0.2em] text-white/40 uppercase">Popular Topics:</span>
-                            {['Leadership', 'Digital Transformation', 'AI Strategy', 'Board Governance', 'Innovation'].map((topic) => (
-                                <button
-                                    key={topic}
-                                    className="px-4 py-2 bg-white/5 text-white/70 text-xs font-light tracking-wide rounded-full border border-white/10 hover:bg-white/10 hover:border-white/20 hover:text-white transition-all duration-300"
-                                >
-                                    {topic}
-                                </button>
-                            ))}
-                        </motion.div>
 
-                        {/* Stats */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 1 }}
-                            className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 mt-16 border-t border-white/5"
-                        >
-                            <div className="space-y-2">
-                                <div className="text-4xl lg:text-5xl font-light text-white">100+</div>
-                                <div className="text-xs tracking-[0.2em] text-white/50 uppercase">Articles Published</div>
-                            </div>
-                            <div className="space-y-2">
-                                <div className="text-4xl lg:text-5xl font-light text-white">50K+</div>
-                                <div className="text-xs tracking-[0.2em] text-white/50 uppercase">Monthly Readers</div>
-                            </div>
-                            <div className="space-y-2">
-                                <div className="text-4xl lg:text-5xl font-light text-white">20+</div>
-                                <div className="text-xs tracking-[0.2em] text-white/50 uppercase">Industry Topics</div>
-                            </div>
-                        </motion.div>
+
                     </motion.div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ const Counter = ({ value, duration = 2 }) => {
     const rounded = useTransform(count, latest => Math.round(latest));
     const ref = useRef(null);
 
-    // Extract number and suffix from value (e.g., "30+" -> 30 and "+")
+    // Extract number and suffix from value (e.g., "7+" -> 7 and "+")
     const numericValue = parseInt(value.replace(/\D/g, ''));
     const suffix = value.replace(/[0-9]/g, '');
 
@@ -45,7 +45,7 @@ const Counter = ({ value, duration = 2 }) => {
 
 const ServicesStats = () => {
     const stats = [
-        { value: "30+", label: "Years Experience" },
+        { value: "7+", label: "Years Experience" },
         { value: "500+", label: "Projects Delivered" },
         { value: "100+", label: "Organizations Served" },
         { value: "100%", label: "Client Satisfaction" }

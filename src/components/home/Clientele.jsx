@@ -18,7 +18,7 @@ const Clientele = () => {
                         SPECIALISING IN DIGITAL BUSINESS <br /> TRANSFORMATION & AI BOARD STEWARDSHIP
                     </h2>
                     <p className="text-sm md:text-base font-light text-white/40 leading-loose mb-12 uppercase">
-                        With over 30 years of international consulting and advisory experience, I specialise in <span className="text-white font-medium">digital strategy and implementation, board governance and risk oversight</span>. Providing a bridge between boards and businesses, I lead <span className="text-white font-medium">digital transformations, turnarounds, and restructures</span>, fostering growth-oriented organisations to achieve sustainable success.
+                        With over 7 years of international consulting and advisory experience, I specialise in <span className="text-white font-medium">digital strategy and implementation, board governance and risk oversight</span>. Providing a bridge between boards and businesses, I lead <span className="text-white font-medium">digital transformations, turnarounds, and restructures</span>, fostering growth-oriented organisations to achieve sustainable success.
                     </p>
                     <p className="text-sm font-light text-white/40 uppercase">
                         A DE&I advocate, I am driven to nurture the <span className="text-white font-medium">next generation of digital leaders</span> through collaborative and culturally diverse working environments.

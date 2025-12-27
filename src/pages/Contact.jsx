@@ -59,6 +59,12 @@ const Contact = () => {
                                     <p className="text-white/60 leading-relaxed">
                                         Select a time on our engineering calendar to discuss your technical requirements directly with a Solution Architect.
                                     </p>
+                                    <div className="mt-4 inline-block bg-white/5 border border-white/10 rounded-lg px-4 py-2">
+                                        <p className="text-xs text-accent font-medium flex items-center gap-2">
+                                            <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                                            Limited Advisory Slots Available for Q1
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className="flex-grow">
                                     <MeetingScheduler onSelectSlot={handleSlotSelect} />

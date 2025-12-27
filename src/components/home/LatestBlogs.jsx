@@ -1,26 +1,9 @@
-import blogSeo from '../../assets/blog-seo-trends.png';
-import blogAi from '../../assets/blog-ai-business.png';
 import { Link } from 'react-router-dom';
+import { blogs as allBlogs } from '../../data/blogs';
 
 const LatestBlogs = () => {
-    const blogs = [
-        {
-            date: "05/06/2025",
-            category: "SEO & STRATEGY",
-            title: "Top SEO Trends in 2025: What's Changing & How to Stay Ahead",
-            excerpt: "Search Engine Optimization (SEO) is evolving rapidly with AI-driven search generative experiences. Discover the pivotal algorithmic shifts and optimization strategies essential for dominance in 2025.",
-            readTime: "5 min read",
-            image: blogSeo
-        },
-        {
-            date: "03/06/2025",
-            category: "AI & INNOVATION",
-            title: "How to Use AI Tools to Grow Your Business Online",
-            excerpt: "Artificial Intelligence is no longer just a buzzword; it's a growth engine. Learn how to leverage cutting-edge AI tools to automate workflows, personalize customer journeys, and scale your digital presence.",
-            readTime: "7 min read",
-            image: blogAi
-        }
-    ];
+    // Show only the first 2 blogs for the latest section
+    const blogs = allBlogs.slice(0, 2);
 
     return (
         <section className="relative py-32 bg-black overflow-hidden">
@@ -129,7 +112,7 @@ const LatestBlogs = () => {
                                 </p>
 
                                 {/* Read More Link */}
-                                <Link to="/blog" className="mt-auto flex items-center gap-4 group/link cursor-pointer">
+                                <Link to={`/blog/${blog.slug}`} className="mt-auto flex items-center gap-4 group/link cursor-pointer">
                                     <div className="w-12 h-[1px] bg-white/20 group-hover/link:bg-[#17b6b2] group-hover/link:w-16 transition-all duration-300"></div>
                                     <span className="text-[10px] font-medium tracking-wide text-white group-hover/link:text-[#17b6b2] uppercase transition-colors duration-300">
                                         READ FULL ARTICLE
@@ -140,30 +123,7 @@ const LatestBlogs = () => {
                     ))}
                 </div>
 
-                {/* Bottom CTA */}
-                <div className="mt-20 text-center">
-                    <div className="inline-flex flex-col items-center gap-6 p-8 bg-white/[0.02] border border-white/5 hover:border-white/20 transition-all duration-300 rounded-xl">
-                        <p className="text-white/60 text-sm max-w-md">
-                            Want to receive the latest insights directly to your inbox?
-                        </p>
-                        <a
-                            href="#"
-                            className="group inline-flex items-center gap-4 px-8 py-4 bg-white hover:bg-white/90 transition-all duration-300 rounded-lg shadow-lg hover:shadow-white/20"
-                        >
-                            <span className="text-xs font-semibold tracking-wide text-black uppercase">
-                                SUBSCRIBE TO NEWSLETTER
-                            </span>
-                            <svg
-                                className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform duration-300"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+
             </div>
 
             {/* Bottom Border */}

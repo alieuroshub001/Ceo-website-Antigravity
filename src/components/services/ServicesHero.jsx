@@ -47,7 +47,7 @@ const ServicesHero = () => {
                 <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <pattern id="grid-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
-                            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" strokeWidth="0.5"/>
+                            <path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" strokeWidth="0.5" />
                         </pattern>
                     </defs>
                     <rect width="100%" height="100%" fill="url(#grid-pattern)" />
@@ -157,11 +157,11 @@ const ServicesHero = () => {
                             className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 mt-16 border-t border-white/5"
                         >
                             <div className="space-y-2">
-                                <div className="text-4xl lg:text-5xl font-light text-white">30+</div>
+                                <div className="text-4xl lg:text-5xl font-light text-white">7+</div>
                                 <div className="text-xs tracking-[0.2em] text-white/50 uppercase">Years Experience</div>
                             </div>
                             <div className="space-y-2">
-                                <div className="text-4xl lg:text-5xl font-light text-white">500+</div>
+                                <div className="text-4xl lg:text-5xl font-light text-white">200+</div>
                                 <div className="text-xs tracking-[0.2em] text-white/50 uppercase">Projects Delivered</div>
                             </div>
                             <div className="space-y-2">

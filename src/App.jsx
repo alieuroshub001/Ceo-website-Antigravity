@@ -12,6 +12,8 @@ const IndependentBoardAdvisory = lazy(() => import('./pages/IndependentBoardAdvi
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 const MeetTheNetwork = lazy(() => import('./pages/MeetTheNetwork'));
 const Blog = lazy(() => import('./pages/Blog'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+const NewsletterIssue = lazy(() => import('./pages/NewsletterIssue'));
 const BookConsultation = lazy(() => import('./pages/BookConsultation'));
 const Contact = lazy(() => import('./pages/Contact'));
 import ScrollToTop from './components/layout/ScrollToTop';
@@ -35,6 +37,8 @@ function App() {
                             <Route path="/digital-business-transform" element={<DigitalTransformation />} />
                             <Route path="/network" element={<MeetTheNetwork />} />
                             <Route path="/blog" element={<Blog />} />
+                            <Route path="/blog/:slug" element={<BlogPost />} />
+                            <Route path="/newsletter-preview" element={<NewsletterIssue />} />
                             <Route path="/contact" element={<Contact />} />
                             <Route path="/appointment" element={<BookConsultation />} />
                         </Routes>

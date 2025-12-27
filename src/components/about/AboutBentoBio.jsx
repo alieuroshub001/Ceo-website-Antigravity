@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { SiUpwork } from 'react-icons/si';
 import SocialModal from '../shared/SocialModal';
 
 const AboutBentoBio = () => {
@@ -101,6 +102,9 @@ const AboutBentoBio = () => {
                                 </a>
                                 <a href="https://twitter.com/Euroshub" className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/10 flex items-center justify-center text-[10px] md:text-sm text-white/40 uppercase hover:border-white hover:text-white transition-all cursor-pointer">
                                     <FaTwitter />
+                                </a>
+                                <a href="https://www.upwork.com/freelancers/sheikhnabeelofficial" className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/10 flex items-center justify-center text-[10px] md:text-sm text-white/40 uppercase hover:border-white hover:text-white transition-all cursor-pointer" target="_blank" rel="noopener noreferrer">
+                                    <SiUpwork />
                                 </a>
                             </div>
                         </div>

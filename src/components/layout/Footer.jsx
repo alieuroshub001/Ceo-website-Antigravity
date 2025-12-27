@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { FaLinkedinIn, FaYoutube, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { SiUpwork } from 'react-icons/si';
 import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi';
 import { BsArrowUpRight, BsArrowRight } from 'react-icons/bs';
 import { useLocation, Link } from 'react-router-dom';
@@ -13,7 +14,8 @@ const Footer = () => {
         { icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/sheikhnabeelofficial/?originalSubdomain=pk', label: 'LinkedIn', color: 'hover:text-blue-500' },
         { icon: FaYoutube, href: 'https://www.youtube.com/@Euroshub', label: 'YouTube', color: 'hover:text-red-500' },
         { icon: FaInstagram, href: 'https://www.instagram.com/sheikhnabeel.official/?hl=en', label: 'Instagram', color: 'hover:text-pink-500' },
-        { icon: FaFacebookF, href: 'https://www.facebook.com/Euroshub.meta', label: 'Facebook', color: 'hover:text-blue-600' }
+        { icon: FaFacebookF, href: 'https://www.facebook.com/Euroshub.meta', label: 'Facebook', color: 'hover:text-blue-600' },
+        { icon: SiUpwork, href: 'https://www.upwork.com/freelancers/sheikhnabeelofficial', label: 'Upwork', color: 'hover:text-[#14a800]' }
     ];
 
     const services = [

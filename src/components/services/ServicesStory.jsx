@@ -68,7 +68,7 @@ const ServicesStory = () => {
                         >
                             {[
                                 { title: "Strategic Focus", desc: "Data-driven insights aligned with your business objectives" },
-                                { title: "Proven Methods", desc: "Industry best practices refined over 30+ years" },
+                                { title: "Proven Methods", desc: "Industry best practices refined over 7+ years" },
                                 { title: "Lasting Impact", desc: "Sustainable solutions that deliver long-term value" }
                             ].map((item, idx) => (
                                 <motion.div

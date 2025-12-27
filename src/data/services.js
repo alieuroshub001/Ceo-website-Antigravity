@@ -1,4 +1,88 @@
-export const servicesData = [
+import serviceStrategy from '../assets/service-strategy.png';
+import serviceOperations from '../assets/service-operations.png';
+import serviceCrm from '../assets/service-crm.png';
+import serviceGrowth from '../assets/service-growth.png';
+
+export const services = [
+    // Highlighted Services (Used on Home)
+    {
+        id: 'c-suite',
+        slug: 'c-suite', // This links to the custom page /c-suite
+        title: "Business Strategy & Brand Consulting",
+        name: "Business Strategy & Brand Consulting", // Alias for detail view
+        description: "Build a clear roadmap with actionable insights to scale your business, attract investors, and strengthen your market presence.",
+        image: serviceStrategy,
+        category: 'business',
+        features: [
+            "Corporate Vision & Roadmap Design",
+            "Brand Identity & Positioning",
+            "Investor Pitch Deck Development",
+            "Market Entry Strategy",
+            "Executive Coaching"
+        ],
+        details: "In today's volatile market, a robust strategy is the difference between surviving and thriving. We partner with C-Suite executives to deconstruct complex challenges and architect sustainable growth frameworks.",
+        isHighlight: true,
+        link: "/c-suite"
+    },
+    {
+        id: 'digital-transform',
+        slug: 'digital-business-transform', // Links to custom page
+        title: "Digital Operations & Project Management",
+        name: "Digital Operations & Project Management",
+        description: "Streamline backend systems, automate workflows, and manage cross-functional teams with tools like ClickUp, Airtable, and Notion.",
+        image: serviceOperations,
+        category: 'tech',
+        features: [
+            "Workflow Automation (Zapier/Make)",
+            "Project Management Setup (ClickUp/Notion)",
+            "SOP Development & Documentation",
+            "Team Productivity Training",
+            "Operational Audit"
+        ],
+        details: "Operational friction kills growth. We audit your existing processes and deploy low-code automation solutions that recover hundreds of man-hours per month.",
+        isHighlight: true,
+        link: "/digital-business-transform"
+    },
+    {
+        id: 'crm-implementation',
+        slug: 'crm-implementation',
+        title: "CRM Implementation & Account Management",
+        name: "CRM Implementation & Account Management",
+        description: "Optimize the entire client lifecycle using HubSpot, Salesforce, and Zoho to enhance retention and drive revenue.",
+        image: serviceCrm,
+        category: 'tech',
+        features: [
+            "CRM Migration & Setup",
+            "Sales Pipeline Architecture",
+            "Customer Segmentation Strategy",
+            "Automated Email Sequences",
+            "Client Retention Systems"
+        ],
+        details: "Your customer data is your most valuable asset. We architect CRM systems that not only store data but actively work to close deals and retain clients.",
+        isHighlight: true,
+        link: "/services/crm-implementation"
+    },
+    {
+        id: 'growth-marketing',
+        slug: 'growth-marketing',
+        title: "Growth Marketing & Funnel Strategy",
+        name: "Growth Marketing & Funnel Strategy",
+        description: "Design and execute data-driven growth strategies focused on lead generation and brand visibility.",
+        image: serviceGrowth,
+        category: 'business',
+        features: [
+            "Full-Funnel Optimization",
+            "Paid Acquisition Strategy (Ads)",
+            "Conversion Rate Optimization (CRO)",
+            "Content Marketing Playbooks",
+            "Analytics & Attribution Modeling"
+        ],
+        details: "Growth isn't guessing. It's a scientific process of testing, measuring, and scaling. We build predictable revenue engines powered by data.",
+        isHighlight: true,
+        link: "/services/growth-marketing"
+    },
+
+    // Standard Services (From old servicesData.js)
     {
         name: "Business Operations",
         slug: "business-operations",

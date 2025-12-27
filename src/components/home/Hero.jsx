@@ -43,15 +43,15 @@ const Hero = () => {
     }, [displayText, isDeleting, index, typingSpeed]);
 
     const highlights = [
-        "30+ Years Leadership Experience",
+        "7+ Years Leadership Experience",
         "Board & C-Suite Advisory",
         "Digital Transformation Expert"
     ];
 
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0a0a09] to-black">
-            <div className="container mx-auto px-6 lg:px-12 relative z-10 pt-20 pb-12">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-6 lg:px-12 relative z-10 pt-32 pb-12 lg:pt-20">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left Side: Content */}
                     <div className="text-center lg:text-left space-y-8">
                         <motion.div
@@ -63,12 +63,12 @@ const Hero = () => {
                             {/* Main Heading */}
                             <div className="space-y-4">
                                 <h2 className="text-sm text-white/50 font-light tracking-wide">
-                                    I Help You
+                                    Helping C-Suite Leaders & Boards
                                 </h2>
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight min-h-[8rem] flex flex-col justify-center">
+                                <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white leading-tight min-h-[6rem] lg:min-h-[8rem] flex flex-col justify-center">
                                     <span className="flex items-center justify-center lg:justify-start">
                                         <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-                                            {displayText}<span className="inline-block w-[3px] h-12 md:h-16 bg-white/80 animate-blink ml-1"></span>
+                                            {displayText}<span className="inline-block w-[2px] lg:w-[3px] h-8 md:h-16 bg-white/80 animate-blink ml-1"></span>
                                         </span>
                                     </span>
                                 </h1>
@@ -76,7 +76,7 @@ const Hero = () => {
 
                             {/* Description */}
                             <p className="text-base text-white/60 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                                Empowering organizations through strategic guidance, innovative leadership, and transformative digital solutions.
+                                Navigating digital transformation, AI governance, and strategic growth for sustainable success in a complex global market.
                             </p>
 
                             {/* Highlights */}
@@ -162,9 +162,9 @@ const Hero = () => {
                         </motion.div>
                     </div>
                 </div>
-            </div>
+            </div >
 
-        </section>
+        </section >
     );
 };
 

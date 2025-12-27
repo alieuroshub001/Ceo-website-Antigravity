@@ -1,6 +1,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaLinkedinIn, FaYoutube, FaInstagram, FaTwitter, FaFacebookF, FaTimes } from 'react-icons/fa';
+import { SiUpwork } from 'react-icons/si';
 import { BsArrowRight, BsCalendarCheck } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { createPortal } from 'react-dom';
@@ -41,6 +42,13 @@ const SocialModal = ({ isOpen, onClose }) => {
             href: 'https://www.facebook.com/Euroshub.meta',
             color: 'hover:bg-[#1877f2] hover:border-[#1877f2]',
             handle: 'Euroshub'
+        },
+        {
+            icon: SiUpwork,
+            label: 'Upwork',
+            href: 'https://www.upwork.com/freelancers/sheikhnabeelofficial',
+            color: 'hover:bg-[#14a800] hover:border-[#14a800]',
+            handle: 'Sheikh Nabeel'
         }
     ];
 

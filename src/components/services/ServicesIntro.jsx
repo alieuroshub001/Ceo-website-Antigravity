@@ -57,7 +57,7 @@ const ServicesIntro = () => {
 
                         {/* Description */}
                         <p className="text-base text-white/60 leading-relaxed max-w-xl">
-                            As a seasoned executive and strategic advisor with over 30 years of experience,
+                            As a seasoned executive and strategic advisor with over 7 years of experience,
                             I partner with organizations to drive transformation, optimize performance, and
                             achieve sustainable competitive advantage in today's dynamic business landscape.
                         </p>

@@ -9,7 +9,7 @@ const MOVEMENT_DAMPING = 1400
 const GLOBE_CONFIG = {
   width: 800,
   height: 800,
-  onRender: () => {},
+  onRender: () => { },
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,
@@ -96,7 +96,7 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
   const stats = [
     { number: "50+", label: "Countries Reached" },
     { number: "100+", label: "Global Clients" },
-    { number: "30+", label: "Years Experience" },
+    { number: "7+", label: "Years Experience" },
   ]
 
   return (

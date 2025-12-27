@@ -1,7 +1,8 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { BsArrowLeft, BsCheckCircleFill, BsArrowRight } from 'react-icons/bs';
-import { servicesData } from '../data/servicesData';
+import { services as servicesData } from '../data/services';
+import SEO from '../components/shared/SEO';
 import { useEffect } from 'react';
 
 const ServiceDetail = () => {
@@ -27,6 +28,11 @@ const ServiceDetail = () => {
     return (
         <div className="bg-black min-h-screen pt-20">
             {/* Background Effects */}
+            <SEO
+                title={service.name}
+                description={service.description}
+                canonical={`/services/${slug}`}
+            />
             <div className="fixed inset-0 opacity-[0.03] pointer-events-none">
                 <div className="absolute inset-0" style={{
                     backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
