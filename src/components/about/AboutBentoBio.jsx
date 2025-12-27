@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { SiUpwork } from 'react-icons/si';
 import SocialModal from '../shared/SocialModal';
+import snImage from '../../assets/sn.webp';
 
 const AboutBentoBio = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -55,7 +56,7 @@ const AboutBentoBio = () => {
                     {/* CENTER COLUMN (MAIN IMAGE) */}
                     <div className="md:col-span-2 relative min-h-[400px] md:min-h-0 bg-black/50 border border-white/5 rounded-2xl md:rounded-3xl overflow-hidden group">
                         <img
-                            src="https://sheikhnabeel.com/wp-content/uploads/2025/05/Untitled-6.png"
+                            src={snImage}
                             alt="Sheikh Nabeel"
                             className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
                         />
