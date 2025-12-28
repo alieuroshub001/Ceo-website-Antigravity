@@ -5,6 +5,9 @@ export default async function handler(req, res) {
     }
 
     try {
+        // DEBUG: Log available keys to help diagnose "Missing Key"
+        console.log("Environment Keys Available:", Object.keys(process.env).filter(k => k.includes('API')));
+
         const apiKey = process.env.VITE_OLLAMA_API_KEY || process.env.OLLAMA_API_KEY;
 
         if (!apiKey) {
