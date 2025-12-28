@@ -10,6 +10,8 @@ export default {
                 background: "#000000",
                 foreground: "#ffffff",
                 accent: "#17b6b2", // Teal updated by user request
+                primary: "#17b6b2", // Mapped to accent for ChatWidget
+                "primary-dark": "#139190", // Darker teal for hover states
                 muted: "#242A3D", // Dark Blue-Grey from research
             },
             fontFamily: {
