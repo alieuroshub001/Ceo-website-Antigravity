@@ -51,14 +51,3 @@ export const useOllama = () => {
 
     return { sendMessage, loading, error };
 };
-
-        } catch (err) {
-    console.error("Chat Error:", err);
-    return `System Error: ${err.message}. Please check console.`;
-} finally {
-    setLoading(false);
-}
-    };
-
-return { sendMessage, loading, error };
-};
