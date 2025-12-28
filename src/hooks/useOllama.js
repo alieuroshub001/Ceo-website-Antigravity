@@ -19,8 +19,8 @@ export const useOllama = () => {
         ];
 
         try {
-            // Using native fetch instead of SDK to avoid Node.js dependencies
-            const response = await fetch('/ollama-api/api/chat', {
+            // Using Vercel Serverless Function to proxy (bypasses CORS)
+            const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
