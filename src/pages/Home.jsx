@@ -1,4 +1,5 @@
 import Hero from '../components/home/Hero';
+import Clientele from '../components/home/Clientele';
 import SEO from '../components/shared/SEO';
 
 import AboutSummary from '../components/home/AboutSummary';
@@ -7,7 +8,6 @@ import SkillsSection from '../components/home/SkillsSection';
 import PortfolioSummary from '../components/home/PortfolioSummary';
 // Globe imported lazily below
 import WhyChooseMe from '../components/home/WhyChooseMe';
-
 import { Suspense, lazy } from 'react';
 
 const Globe = lazy(() => import('../components/home/Globe/Globe').then(module => ({ default: module.Globe })));
@@ -23,6 +23,7 @@ const Home = () => {
                 description="Sheikh Nabeel is a strategic growth advisor for C-Suite executives, specializing in digital transformation, board governance, and operational excellence."
             />
             <Hero />
+            <Clientele />
 
             <AboutSummary />
             <ServicesIndex />

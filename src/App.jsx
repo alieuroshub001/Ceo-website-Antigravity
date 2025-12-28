@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar'; // Force HMR update
 import Footer from './components/layout/Footer';
+import ChatWidget from './components/chat/ChatWidget'; // Chatbot Import
 const Home = lazy(() => import('./pages/Home'));
 const Services = lazy(() => import('./pages/Services'));
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
@@ -25,6 +26,7 @@ function App() {
             <div className="bg-black min-h-screen text-white selection:bg-accent selection:text-white flex flex-col">
                 <Navbar />
                 <main className="flex-grow">
+                    <ChatWidget /> {/* Chatbot Component */}
                     <Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>}>
                         <Routes>
                             <Route path="/" element={<Home />} />
