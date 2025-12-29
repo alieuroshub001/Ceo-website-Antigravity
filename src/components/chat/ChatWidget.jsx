@@ -156,7 +156,7 @@ const ChatWidget = () => {
                                 </button>
                             </div>
                             <div className="text-center mt-2.5">
-                                <p className="text-[10px] text-gray-600 font-medium tracking-wide uppercase">AI Assistant v1.0 • Powered by Antigravity</p>
+                                <p className="text-[10px] text-gray-600 font-medium tracking-wide uppercase">AI Assistant v1.0</p>
                             </div>
                         </form>
                     </motion.div>

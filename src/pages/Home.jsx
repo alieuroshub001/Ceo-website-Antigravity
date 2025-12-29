@@ -1,5 +1,4 @@
 import Hero from '../components/home/Hero';
-import Clientele from '../components/home/Clientele';
 import SEO from '../components/shared/SEO';
 
 import AboutSummary from '../components/home/AboutSummary';
@@ -23,7 +22,6 @@ const Home = () => {
                 description="Sheikh Nabeel is a strategic growth advisor for C-Suite executives, specializing in digital transformation, board governance, and operational excellence."
             />
             <Hero />
-            <Clientele />
 
             <AboutSummary />
             <ServicesIndex />
