@@ -9,7 +9,7 @@ const ServicesOffer = () => {
                 <img
                     src={aboutImage}
                     alt="Background"
-                    className="w-full h-full object-cover opacity-40"
+                    className="w-full h-full object-cover opacity-40 object-[70%] md:object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/50"></div>
             </div>
