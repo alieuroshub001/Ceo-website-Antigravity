@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/sign.webp';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -44,7 +43,7 @@ const Navbar = () => {
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-sm group-hover:blur-md transition-all"></div>
                             <img
-                                src={logo}
+                                src="/chat-logo.png"
                                 alt="Sheikh Nabeel"
                                 className="w-11 h-11 rounded-full object-cover border border-white/30 relative z-10 shadow-lg"
                             />

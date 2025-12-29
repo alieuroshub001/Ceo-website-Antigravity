@@ -1,7 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/ollama-api/:path*",
+      "destination": "https://ollama.com/:path*"
+    }
   ]
 }
