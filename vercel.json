@@ -6,11 +6,9 @@
     {
       "source": "/ollama-api/:path*",
       "destination": "https://ollama.com/:path*"
-    }
-  ],
-  "routes": [
+    },
     {
-      "src": "/(.*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
