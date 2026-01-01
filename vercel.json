@@ -3,6 +3,10 @@
     {
       "source": "/ollama-api/:path*",
       "destination": "https://ollama.com/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
